@@ -1,0 +1,24 @@
+name: CD
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    name: Publish to Github Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+      - run: mkdir build
+      - run: cp README.md build/README.md
+      - run: jq 'del(.devDependencies) | del(.scripts)' package.json > build/package.json
+      - run: cp -r dist build/dist
+      - run: npm publish ./build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
