@@ -1,9 +1,10 @@
-import { Inject } from '@nestjs/common';
+import {Inject, Injectable} from '@nestjs/common';
 import { MODULE_OPTIONS_TOKEN } from './twilio.module-definition';
 import { TwilioModuleOptions } from './twilio.module';
 import Twilio from 'twilio';
 import TwilioType from 'twilio/lib/rest/Twilio';
 
+@Injectable()
 export class TwilioService {
   private readonly twilioSdk: TwilioType;
 
