@@ -19,6 +19,6 @@ jobs:
       - run: cp README.md build/README.md
       - run: jq 'del(.devDependencies) | del(.scripts)' package.json > build/package.json
       - run: cp -r dist build/dist
-      - run: npm publish ./build
+      - run: npm publish ./build --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
