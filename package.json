@@ -1,6 +1,6 @@
 {
-  "name": "@bedandbreakfast/nestjs-twilio",
-  "version": "0.0.2",
+  "name": "@bed-and-breakfast/nestjs-twilio",
+  "version": "0.0.3",
   "description": "Nestjs Twilio provider",
   "author": "Bed & Breakfast Europe",
   "publishConfig": {
