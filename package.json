@@ -1,5 +1,5 @@
 {
-  "name": "@bed-and-breakfast/nestjs-twilio",
+  "name": "@bedandbreakfast/nestjs-twilio",
   "version": "0.0.1",
   "private": false,
   "main": "dist/index.js",
