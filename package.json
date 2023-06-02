@@ -1,6 +1,21 @@
 {
   "name": "@bed-and-breakfast/nestjs-twilio",
-  "version": "0.0.1",
+  "version": "0.0.4",
+  "description": "Nestjs Twilio provider",
+  "author": "Bed & Breakfast Europe",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bed-and-breakfast/nestjs-twilio.git"
+  },
+  "homepage": "https://github.com/bed-and-breakfast/nestjs-twilio",
+  "bugs": "https://github.com/bed-and-breakfast/nestjs-twilio/issues",
+  "keywords": [
+    "nestjs",
+    "twilio"
+  ],
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
